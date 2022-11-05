@@ -1,15 +1,28 @@
 # Hugotran theme
 
 Theme integrating multiple technologies:
-. hugo-cards theme from webjeda-cards
-. asciidoc standards for text.adoc rendering
-. pandoc standards options (.pdc)
-. markdown standards compatibily (.md)
-. embed-pdf shortcode pdf viewer
-. embed-epub analogue for epub viewing
-. mathjax mathematical symbol rendering
-. buttons for sharing content to favorite media
-. show/hide shortcode for dynamic masking
 
-## howto use this theme
-1. git clone t
+1. hugo-cards theme from webjeda-cards
+2. asciidoc standards for text.adoc rendering
+3. pandoc standards options (.pdc)
+4. markdown standards compatibily (.md)
+5. embed-pdf shortcode pdf viewer
+6. embed-epub analogue for epub viewing
+7. mathjax mathematical symbol rendering
+8. buttons for sharing content to favorite media
+9. show/hide shortcode for dynamic masking
+
+## howto test hugotran-theme
+1. git clone https://github.com/tran62/hugotran-theme.git
+2. cd hugotran-theme
+3. hugo serve --themeDir "../.." -s exampleSite -t "hugotran-theme"
+
+## howto use hugotran-theme for a new site
+1. hugo new site example
+2. cd example
+3. git clone https://github.com/tran62/hugotran-theme.git themes (check)
+4. hugo --buildDrafts --theme="hugotran-theme" --watch server (check)
+
+
+
+
