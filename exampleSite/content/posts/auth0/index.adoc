@@ -1,0 +1,102 @@
+---
+## Important: If this is a draft, next line should NOT begin with #
+draft: true
+title: Auth0
+date: 2021-09-11
+## below are user-defined parameters (lower case keys recommended)
+subtitle:
+tags:
+  - meta
+  - software
+  - tech
+  - coding
+  - web
+markup: "adoc"  # or "pdc" or "md"
+categories: ["post"] # "md" "pdc" "viet"
+math: false  # true for mathjax rendering
+s9: true # s9 social share widget
+img: montecha.png
+---
+// BEGIN AsciiDoc Document Header
+:sectlinks:
+:sectanchors: before
+:icons: font
+:tip-caption: 💡Tip
+:caution-caption: 🔥Caution
+:important-caption: ❗️Important
+:warning-caption: 🧨Warning
+:note-caption: 🔖Note
+// After blank line, BEGIN asciidoc
+
+Link : https://medium.com/@quiaro/setting-up-authentication-with-auth0-for-client-side-apps-d6c3f7fd3580[D Quiros- Auth0 for SPA]
+
+image:auth0-logo.png[]
+
+Steps: 
+
+. Set up an Auth0 Client (SPA js app using an API)
+. Set locahost:3000/callback
+. select *Implicit* _Grant Type_
+. $ npm i -g create-react-app
+. $ create-react-app app
+. $ yarn start (in app directory)
+. $ yarn add react-router-dom
+. Define routes in index.js 
+   import React from 'react';
+  import ReactDOM from 'react-dom';
+  import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+  import './index.css';
+  import Home from './Home';
+  import LoginCallback from './LoginCallback';
+  import registerServiceWorker from './registerServiceWorker';
+
+  ReactDOM.render(
+  <Router>
+    <Switch>
+      <Route path="/callback" component={LoginCallback} />
+      <Route path="/" component={Home} />
+    </Switch>
+  </Router>,
+  document.getElementById('root')
+  );
+  registerServiceWorker();
+
+. $ yarn add auth0-js // instantiate Auth0 Client with _Domain_ and _Client ID_:
+  import auth0 from 'auth0-js';
+
+const CLIENT_DOMAIN = '__AUTH0_DOMAIN__';
+const CLIENT_ID = '__AUTH0_CLIENT_ID__';
+const SCOPE = 'openid';
+const REDIRECT = 'http://localhost:3000/callback';
+
+  const auth = new auth0.WebAuth({
+  domain: CLIENT_DOMAIN,
+  clientID: CLIENT_ID,
+});
+
+  export function login() {
+    auth.authorize({
+      responseType: 'token',
+      redirectUri: REDIRECT,
+      scope: SCOPE,
+    });
+  }
+
+. Finally create the _Home_ and _LoginCallBack_ components.
+
+home.js:
+
+  import { login } from './common/auth';
+  export default () => {
+    login();
+    return null;
+  }
+
+LoginCallback.js:
+
+  import React from 'react';
+  export default () => (
+    <div>
+      <p>Login successful!</p>
+    </div>
+  )

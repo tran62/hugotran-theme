@@ -1,0 +1,39 @@
+---
+#draft: true
+title: README Themes
+date: 2021-08-29
+## below are user-defined parameters (lower case keys recommended)
+subtitle:
+tags:
+  - meta
+markup: "adoc"  # or "pdc" or "md"
+categories: ["adoc"] # "md" "pdc" "viet"
+math: false  # no mathjax 
+s9: true
+---
+
+## themeless-gitless-intro-hugo
+To start with.
+Implement and test :
+
+- asciidoc (install, +Gemfile)
+- mathjax (layouts/math, fm math: param)
+- new article: 
+  `hugo new articles/new-aticle.adoc`
+- custom stylesheets:
+  - assets/css/custom.css ?
+  - layouts/partials/head-scripts.html
+- add common images:
+  - statics/images/new-image.png
+
+
+# antora-default-ui-hugo-theme
+- Clone the theme repository from GitHub into your site's themes directory:
+  -  $ git clone https://github.com/basil/antora-default-ui-hugo-theme.git themes/antora-default-ui-hugo-
+  
+- or alternatively:
+  - $ git submodule add https://github.com/basil/antora-default-ui-hugo-theme.git themes/antora-default-ui-hugo-theme
+
+# hugo-theme-arch-terminal
+- submodule with asciidoctor css:
+  - $ git submodule add https://github.com/foo-dogsquared/hugo-theme-arch-terminal.git themes/hugo-theme-arch-terminal

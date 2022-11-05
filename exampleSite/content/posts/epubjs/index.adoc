@@ -1,0 +1,48 @@
+---
+## Important: If this is a draft, next line should NOT begin with #
+#draft: true
+title: Epub.js
+date: 2022-08-12
+## below are user-defined parameters (lower case keys recommended)
+subtitle: FuturePress
+tags:
+  - hugo
+  - tools
+  - multilingual
+markup: "adoc"  # or "pdc" or "md"
+categories: ["article"] # "post" "prayer" "viet"
+math: true  # true for mathjax rendering
+s9: true # s9 "social share" widget
+st: false # "sharethis" widget 
+img: epubreader.jpeg
+---
+// BEGIN AsciiDoc Document Header
+:sectlinks:
+:sectanchors: before
+:icons: font
+:tip-caption: 💡Tip
+:caution-caption: 🔥Caution
+:important-caption: ❗️Important
+:warning-caption: 🧨Warning
+:note-caption: 🔖Note
+// After blank line, BEGIN asciidoc
+
+### http://futurepress.org[Epub reader - FuturePress]
+
+
+
+
+
+
+{{< embed-epub 
+url="/epub/ebook.epub" 
+method="continuous" 
+flow="paginated"
+>}}
+
+
+== Bibliography:
+
+[bibliography]
+
+. [[[EPUB.js]]] eBooks reader, Epub.js, FuturePress, date-of-publication link:https://github.com/futurepress/epub.js[clickhere]

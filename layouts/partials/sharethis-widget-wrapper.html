@@ -1,0 +1,15 @@
+<!-- layouts/partials/sharethis-widget-wrapper.html -->
+<!-- the following script is to be put in the head part of the html -->
+<!-- script type='text/javascript' 
+ src='https://platform-api.sharethis.com/js/sharethis.js#property=616ad9824bdfd50012dd5c8a&product=sop' 
+ async='async'></script -->
+
+{{ if or .Params.st .Site.Params.st }}
+    {{ i18n  "shareThisArticle" }}
+    <div class="sharethis-inline-share-buttons"></div>
+{{ end }}
+
+{{ if or .Params.ft .Site.Params.ft }}
+    {{ i18n  "followThisAccount" }}
+<div class="sharethis-inline-follow-buttons"></div>
+{{ end }}
