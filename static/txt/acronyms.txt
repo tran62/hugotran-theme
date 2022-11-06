@@ -1,7 +1,0 @@
-:afaik: pass:[<abbr title="As far as I know">AFAIK</abbr>]
-:gdpr: pass:[<abbr title="General Data Protection Regulation (fr:RGPD)">GDPR</abbr>]
-:hateoas: pass:[<abbr title="Hypermedia as the Engine of Application State ">HATEOAS</abbr>]
-:html: pass:[<abbr title="HyperText Markup Language">HTML</abbr>]
-:imho: pass:[<abbr title="In my humble opinion">IMHO</abbr>]
-:rest: pass:[<abbr title="Representation State Transfer">REST</abbr>]
-:rgpd: pass:[<abbr title="Règlement Général sur la Protection des Données (en:GDPR)">RGPD</abbr>]

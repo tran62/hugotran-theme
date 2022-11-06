@@ -12,7 +12,7 @@ Theme integrating multiple technologies:
 8. buttons for sharing content to favorite media
 9. show/hide shortcode for dynamic masking
 
-## howto test hugotran-theme
+## howto test hugotran-theme standalone
 1. git clone https://github.com/tran62/hugotran-theme.git
 2. cd hugotran-theme
 3. hugo serve --themeDir "../.." -s exampleSite -t "hugotran-theme"
@@ -20,7 +20,8 @@ Theme integrating multiple technologies:
 ## howto use hugotran-theme for a new site
 1. hugo new site example
 2. cd example
-3. git clone https://github.com/tran62/hugotran-theme.git themes (check)
+3. git clone https://github.com/tran62/hugotran-theme.git themes/hugo-theme
+4. hugo serve -s themes/hugotran-theme/eampleSite -t ../..
 4. hugo --buildDrafts --theme="hugotran-theme" --watch server (check)
 
 
