@@ -206,6 +206,13 @@ git push origin master
 . epub theme for Hugo link:https://github.com/weitblick/epub[weitblick]
 . asciidoc to epub link:https://github.com/asciidoctor/asciidoctor-epub3[asciidoctor-epub3]
 
+### create remote origin repository
+git remote add origin git@github.com:tran62/repo-name.git
+git branch -M main
+git push -u origin main
+
+### publish on netlify.com
+goto your account on netlify and connect to your github repository.
 
 ___
 
