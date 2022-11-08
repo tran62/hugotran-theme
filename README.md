@@ -11,6 +11,7 @@ Theme integrating multiple technologies:
 7. mathjax mathematical symbol rendering
 8. buttons for sharing content to favorite media
 9. show/hide shortcode for dynamic masking
+10. fixtures for deploying on netlify.com
 
 ## howto test hugotran-theme standalone
 1. git clone https://github.com/tran62/hugotran-theme.git

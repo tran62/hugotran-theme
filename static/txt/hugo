@@ -1,0 +1,8 @@
+#!/bin/bash
+export ASCIIDOCTOR_ORIGINAL=$(which asciidoctor)
+export PANDOC_ORIGINAL=$(which pandoc)
+
+# Overrides pandoc.
+PATH=$PWD/bin:$PATH
+
+hugo "$@"

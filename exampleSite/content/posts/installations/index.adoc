@@ -212,7 +212,9 @@ git branch -M main
 git push -u origin main
 
 ### publish on netlify.com
-goto your account on netlify and connect to your github repository.
+- copy required files for successful deployment: netlify.toml, batch commands: bin/asciidoc, bin/pandoc, Gemfile, Gemfile.lock, hugo, runtime.txt, acronyms.txt
+- goto your account on netlify and connect to your github repository.
+
 
 ___
 
