@@ -22,7 +22,7 @@ Theme integrating multiple technologies:
 1. hugo new site example
 2. cd example
 3. git clone https://github.com/tran62/hugotran-theme.git themes/hugo-theme
-4. hugo serve -s themes/hugotran-theme/eampleSite -t ../..
+4. hugo serve -s themes/hugotran-theme/exampleSite -t ../..
 4. hugo --buildDrafts --theme="hugotran-theme" --watch server (check)
 
 
