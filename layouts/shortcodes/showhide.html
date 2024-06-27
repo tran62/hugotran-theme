@@ -1,0 +1,30 @@
+<style>
+#{{ .Get "id" }} {
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  text-align: left;
+  background-color: lightblue;
+  margin-top: 20px;
+  border: 1px solid #333;
+}
+</style>
+
+<p><i>hide/show:</i>
+<button onclick="hideshow({{ .Get "id" }})">{{ .Get "id" }}</button>
+
+<div id={{ .Get "id" }} >
+  {{ .Inner  }}
+</div>
+<script>
+function hideshow(id) {
+    
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    
+  } else {
+    x.style.display = "none";
+    
+  }
+}
+</script>
