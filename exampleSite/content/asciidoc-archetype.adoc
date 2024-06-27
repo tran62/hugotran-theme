@@ -1,0 +1,191 @@
+---
+## Important: If this is a draft, next line should NOT begin with #
+draft: true
+title: AsciiDoc Archetype default
+date: 2022-11-03
+## below are user-defined parameters (lower case keys recommended)
+subtitle: asciidoc defaults
+tags:
+  - literature
+  - philo
+  - math
+  - poetry
+  - tools
+  - chinese
+  - viet
+markup: "adoc"  # or "pdc" or "md"
+categories: ["test"] # "post" "prayer" "viet"
+math: true  # true for mathjax rendering
+s9: true # s9 "social share" widget
+st: false # "sharethis" widget 
+img:
+---
+// BEGIN AsciiDoc Document Header
+:sectlinks:
+:sectanchors: before
+:icons: font
+:tip-caption: 💡Tip
+:caution-caption: 🔥Caution
+:important-caption: ❗️Important
+:warning-caption: 🧨Warning
+:note-caption: 🔖Note
+// After blank line, BEGIN asciidoc
+
+
+== First Steps with http://asciidoc.org[AsciiDoc]
+
+
+
+// separate two adjacent lists using a line comment (only the leading // is required)
+
+- characters can be escaped using a {backslash}
+* for instance, you can escape a quote inside emphasized text like 'Here\'s Johnny!'
+- you can safely use reserved XML characters like <, > and &, which are escaped when rendering
+- force a space{sp}between inline elements using the \{sp} attribute
+- hold text together with an intrinsic non-breaking{nbsp}space attribute, \{nbsp}
+- handle words with unicode characters like in the name Gregory Romé
+- claim your copyright (C), registered trademark (R) or trademark (TM)
+
+You can write text http://example.com[with inline links], optionally{sp}using an explicit link:http://example.com[link prefix]. In either case, the link can have a http://example.com?foo=bar&lang=en[query string].
+
+If you want to break a line +
+just end it in a {plus} sign +
+and continue typing on the next line.
+
+
+=== Lists Upon Lists
+
+.Adjacent lists
+* this list  (* this list)
+* should join
+* to have
+* four items
+
+[[numbered]]
+.Numbered lists (.Numbered lists)
+A. These items (. These items)
+B. will be auto-numbered
+.. and can be nested (.. and can be nested)
+... new
+... second new
+.. second
+C. A numbered list can nest
+* unordered
+* list
+* items
+
+
+[[defs]]
+term::
+  definition
+line two
+[[another_term]]another term::
+
+  another definition, which can be literal (indented) or regular paragraph
+
+This should be a standalone paragraph, not grabbed by the definition list.
+
+[[nested]]
+* first level
+written on two lines
+* first level
++
+....
+with this literal text
+....
++
+** second level
+*** third level
+- fourth level
+* back to +
+first level
+
+// this is just a comment
+
+Let's make a horizontal rule...
+
+'''
+
+then take a break.
+
+////
+We'll be right with you...
+
+after this brief interruption.
+////
+
+== We're back!
+
+
+
+*Example of link* 
+link:/posts/asciidoc-test/tiger.png[tiger-link]
+
+*Examples of image* 
+
+image:/images/tiger.png[title="my title in static/images",alt="alt title", 480,300]
+
+
+*Example of aligned verse:*
+
+[verse]
+To be, or not to be, that is the question:
+Whether 'tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take Arms against a Sea of troubles,
+And by opposing end them: to die, to sleep
+No more; and by a sleep, to say we end
+The heart-ache, and the thousand natural shocks
+That Flesh is heir to? 'Tis a consummation
+Devoutly to be wished. To die, to sleep,
+To sleep, perchance to Dream; aye, there's the rub,
+For in that sleep of death, what dreams may come,
+When we have shuffled off this mortal coil,
+Must give us pause. There's the respect
+That makes Calamity of so long life:
+For who would bear the Whips and Scorns of time,
+The Oppressor's wrong, the proud man's Contumely,
+The pangs of dispised Love, the Law’s delay,
+The insolence of Office, and the spurns
+That patient merit of th'unworthy takes,
+When he himself might his Quietus make
+With a bare Bodkin? Who would Fardels bear, [F: these Fardels]
+To grunt and sweat under a weary life,
+But that the dread of something after death,
+The undiscovered country, from whose bourn
+No traveller returns, puzzles the will,
+And makes us rather bear those ills we have,
+Than fly to others that we know not of?
+Thus conscience does make cowards of us all,
+And thus the native hue of Resolution
+Is sicklied o'er, with the pale cast of Thought,
+And enterprises of great pitch and moment, [F: pith]
+With this regard their Currents turn awry, [F: away]
+And lose the name of Action. Soft you now,
+The fair Ophelia? Nymph, in thy Orisons
+Be all my sins remember'd.
+
+*Example of quote:*
+
+[quote, Sir Arthur Conan Doyle, The Adventures of Sherlock Holmes]
+____
+When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.
+____
+### Subscript / Superscript
+
+- 19^th^ coded: `19\^th^`
+- H~2~O  coded: `H\~2~O`
+
+### Embedded Pdf
+{{< embed-pdf url="../welschinger.pdf" >}}
+
+== Footnotes
+n1 footnote:n1[n1 Text of footnote n°1]
+
+test ref biblio <<model>>
+
+== Bibliography:
+
+[bibliography]
+
+. [[[model]]] Author name, Title, Editor, date-of-publication link:site[clickhere]
