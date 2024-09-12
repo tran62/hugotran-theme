@@ -1,0 +1,19 @@
+{{/* Add additional scripts here */}}
+
+{{/* $themeless_styles := resources.Get "scss/themeless_style.scss" | toCSS  */}}
+<!--link rel="stylesheet" href="{{/* $themeless_styles.Permalink */}}" type="text/css" /-->
+
+{{ $asciidoc_styles := resources.Get "css/asciidoc.css" }}
+<link rel="stylesheet" href="{{ $asciidoc_styles.Permalink }}" type="text/css" />
+
+{{ if or .Params.s9 .Site.Params.s9 }}
+<script id="s9-sdk" async defer content="33fbf926f45e4d42afe4e864df7e1fda" src="//cdn.social9.com/js/socialshare.min.js"></script>
+{{ end }}
+
+<script async defer src="js/bootstrap.min.js"></script>
+
+{{ if or .Params.search .Site.Params.search }}
+     
+<script async defer src="js/lunr.min.js"></script>
+<script src="js/search.min.js"></script>
+{{ end }}

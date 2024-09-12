@@ -1,0 +1,71 @@
+---
+## Important: If this is a draft, next line should NOT begin with #
+#draft: true
+title: Github tools
+date: 2022-02-26
+## below are user-defined parameters (lower case keys recommended)
+subtitle: gists, LFS, jekyll, sync with netlify
+tags:
+  - meta
+  - tech
+  - coding
+  - software
+markup: "adoc"  # or "pdc" or "md"
+categories: ["post"] # "md" "pdc" "viet"
+math: true  # true for mathjax rendering
+s9: true # s9 "social share" widget
+st: false # "sharethis" widget 
+img: git-github.png
+---
+// BEGIN AsciiDoc Document Header
+:sectlinks:
+:sectanchors: before
+:icons: font
+:tip-caption: 💡Tip
+:caution-caption: 🔥Caution
+:important-caption: ❗️Important
+:warning-caption: 🧨Warning
+:note-caption: 🔖Note
+// After blank line, BEGIN asciidoc
+
+___
+
+
+== Catalogue of http://gist.github.com[Gist applications]
+ref biblio <<dawson>>
+
+.Starting commands in line :
+* jekyll : _>bundle exec jekyll s_
+* gatsby : _>gatsby develop_
+* hugo : _>:hugo serve --gc --disableFastRender_
+* haskell : _>ghci_
+* python : _>python prog.py_
+* node-js : _>npm prog.js_
+* c++ : _>gcc _
+* ruby : _>gem prog_
+* erlang : ?
+* rust : ?
+
+.HTML scripts
+* javascript :
+* headers : 
+
+.CSS :
+
+.Markdown -> asciidoc
+* lists : unordered (-,*) ordered (.)
+* images : ![alt-text](link "title") image:link[]
+* links : (lnk)[]  link:lnk[]
+* youtube : {{< youtube ivcGZFbGwKU >}}
+* footnote: .footnote:1[text]
+* bibliography: ref <<ref>>
+* abreviation: :imho: pass:[<abbr title="In my humble opinion">IMHO</abbr>]  ref {imho}
+ 
+
+
+
+== Bibliography:
+
+[bibliography]
+
+. [[[dawson]]] *Chris Dawson with Ben Straub*, _Building Tools with GitHub - chap 2: Gists and the Gist API_, O'Reilly 2016, link:https://github.com/xrd/building-tools-with-github[link: github/xrd]

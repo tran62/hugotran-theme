@@ -12,7 +12,7 @@ Theme integrating multiple technologies:
 8. buttons for sharing content to favorite media
 9. show/hide shortcode for dynamic masking
 10. fixtures for deploying on netlify.com
-git 
+
 ## howto test hugotran-theme standalone
 1. git clone https://github.com/tran62/hugotran-theme.git
 2. cd hugotran-theme
@@ -22,7 +22,7 @@ git
 1. hugo new site example
 2. cd example
 3. git clone https://github.com/tran62/hugotran-theme.git themes/hugo-theme
-4. hugo serve -s themes/hugotran-theme/eampleSite -t ../..
+4. hugo serve -s themes/hugotran-theme/exampleSite -t ../..
 4. hugo --buildDrafts --theme="hugotran-theme" --watch server (check)
 
 
