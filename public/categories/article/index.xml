@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Article on hugascii</title>
+    <link>http://localhost:1313/categories/article/</link>
+    <description>Recent content in Article on hugascii</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Fri, 12 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Epub.js</title>
+      <link>http://localhost:1313/content/posts/epubjs/</link>
+      <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/content/posts/epubjs/</guid>
+      <description>&lt;div class=&#34;sect2&#34;&gt;&#xA;&lt;h3 id=&#34;_epub_reader_futurepress&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#_epub_reader_futurepress&#34;&gt;&lt;/a&gt;&lt;a class=&#34;link&#34; href=&#34;#_epub_reader_futurepress&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://futurepress.org&#34;&gt;Epub reader - FuturePress&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;http://localhost:1313/js/epub.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://localhost:1313/css/epub-examples.css&#34;&gt;&#xA;&#xA;&lt;div id=&#34;viewer&#34; class=&#34;spreads&#34;&gt;&lt;/div&gt;&#xA;&lt;div id=&#34;prev&#34; class=&#34;arrow&#34;&gt;‹&lt;/div&gt;&#xA;&lt;div id=&#34;next&#34; class=&#34;arrow&#34;&gt;›&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;     &#xA;  var book = ePub( &#39;\/epub\/ebook.epub&#39;);&#xA;  var method = &#39;continuous | &#34;default&#34; &#39;;  &#xA;  var flow = &#39;paginated | &#34;auto&#34; &#39;;  &#xA;  var rendition = book.renderTo(&#34;viewer&#34;, { method: method, flow: flow, width: &#34;100%&#34;});&#xA;  var displayed = rendition.display();&#xA;    displayed.then(function(renderer){&#xA;      &#xA;  });&#xA;&#xA;  &#xA;  book.loaded.navigation.then(function(toc){&#xA;      &#xA;    });&#xA;&#xA;  var next = document.getElementById(&#34;next&#34;);&#xA;  next.addEventListener(&#34;click&#34;, function(){&#xA;      rendition.next();&#xA;    }, false);&#xA;&#xA;  var prev = document.getElementById(&#34;prev&#34;);&#xA;  prev.addEventListener(&#34;click&#34;, function(){&#xA;      rendition.prev();&#xA;    }, false);&#xA;&#xA;  var keyListener = function(e){&#xA;&#xA;    &#xA;    if ((e.keyCode || e.which) == 37) {&#xA;        rendition.prev();&#xA;    }&#xA;&#xA;    &#xA;    if ((e.keyCode || e.which) == 39) {&#xA;        rendition.next();&#xA;    }&#xA;&#xA;  };&#xA;&#xA;  rendition.on(&#34;keyup&#34;, keyListener);&#xA;  document.addEventListener(&#34;keyup&#34;, keyListener, false);&#xA;  &#xA;&lt;/script&gt;&#xA;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

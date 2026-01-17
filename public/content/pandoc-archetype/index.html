@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Pandoc Archetype default - hugascii</title>
+<meta name="description" content="embed-pdf Previous Next &nbsp; &nbsp; Page: / Retour à la page principale
+"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://localhost:1313/content/pandoc-archetype/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="embed-pdf Previous Next &nbsp; &nbsp; Page: / Retour à la page principale
+" />
+<meta name="twitter:title" content="Pandoc Archetype default - hugascii" />
+<meta name="twitter:site" content="https://twitter.com/qatran" />
+<meta name="twitter:creator" content="https://twitter.com/qatran" />
+
+
+<meta property="og:type" content="article" />
+<meta content="Pandoc Archetype default - hugascii" property="og:title">
+<meta content="embed-pdf Previous Next &nbsp; &nbsp; Page: / Retour à la page principale
+" property="og:description">
+<meta property="og:url" content="http://localhost:1313/content/pandoc-archetype/" />
+<meta property="og:site_name" content="hugascii" />
+<meta property="article:section" content="test" />
+<meta property="article:published_time" content="2022-11-03 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+<script type="application/ld+json">
+{ 
+    "@context": "http://schema.org", 
+    "@type": "BlogPosting",
+    "headline": "Pandoc Archetype default",
+    "genre": "test",  
+    "url": "http:\/\/localhost:1313\/content\/pandoc-archetype\/",
+    "datePublished": "2022-11-03 00:00:00 \u002b0000 UTC",
+    "description": "embed-pdf Previous Next \u0026nbsp; \u0026nbsp; Page: \/ Retour à la page principale\n",
+    "author": {
+        "@type": "Person",
+        "name": ""
+    }
+ }
+</script>
+
+
+
+
+<link rel="stylesheet" href="/sass/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/asciidoc.css" type="text/css" />
+
+
+<script id="s9-sdk" async defer content="33fbf926f45e4d42afe4e864df7e1fda" src="//cdn.social9.com/js/socialshare.min.js"></script>
+
+
+<script async defer src="js/bootstrap.min.js"></script>
+
+
+     
+<script async defer src="js/lunr.min.js"></script>
+<script src="js/search.min.js"></script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">hugascii</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="http://localhost:1313/tags/">Tags</a></li>
+        <li><a href="http://localhost:1313/categories/">Categories</a></li>
+        <li><a href="http://localhost:1313/search/">Search</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    
+    <div class="s9-widget-wrapper"></div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+</header>
+
+
+    <div class="container">
+      <div class="wrapper">
+        
+<div class="row">
+<div class="col-md-8">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">Pandoc Archetype default</h1>
+            <p class="post-meta"><time datetime='2022-11-03T00:00:00Z' itemprop="datePublished">November 3, 2022</time></p>
+                 
+          </header>
+
+          <div class="post-content" itemprop="articleBody">
+            <h2 id="embed-pdf">embed-pdf</h2>
+<script type="text/javascript" src= '/js/pdf-js/build/pdf.min.js'></script>
+<style>
+#the-canvas {
+  border: 1px solid black;
+  direction: ltr;
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+#paginator {
+  display: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#loadingWrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+}
+
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #d2d0d0;;
+  border-radius: 50%;
+  border-top-color: #383838;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+</style>
+
+<div id="paginator">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    &nbsp; &nbsp;
+    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+</div>
+<div id="embed-pdf-container">
+    <div id="loadingWrapper">
+      <div id="loading"></div>
+    </div>
+    <canvas id="the-canvas"></canvas>
+</div>
+
+<script type="text/javascript">
+window.onload = function() {
+
+
+var url = "http:\/\/localhost:1313\/" + '..\/#';
+
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+
+
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "http:\/\/localhost:1313\/" + 'js/pdf-js/build/pdf.worker.min.js';
+
+
+var pdfDoc = null,
+    pageNum = selectedPageNum,
+    pageRendering = false,
+    pageNumPending = null,
+    scale = 3,
+    canvas = document.getElementById('the-canvas'),
+    ctx = canvas.getContext('2d'),
+    paginator = document.getElementById("paginator"),
+    loadingWrapper = document.getElementById('loadingWrapper');
+
+
+
+showPaginator();
+showLoader();
+
+
+
+function renderPage(num) {
+  pageRendering = true;
+  
+  pdfDoc.getPage(num).then(function(page) {
+    var viewport = page.getViewport({scale: scale});
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    
+    var renderContext = {
+      canvasContext: ctx,
+      viewport: viewport
+    };
+    var renderTask = page.render(renderContext);
+
+    
+    renderTask.promise.then(function() {
+      pageRendering = false;
+      showContent();
+      
+      if (pageNumPending !== null) {
+        
+        renderPage(pageNumPending);
+        pageNumPending = null;
+      }
+    });
+  });
+
+  
+  document.getElementById('page_num').textContent = num;
+}
+
+
+
+function showContent() {
+  loadingWrapper.style.display = 'none';
+  canvas.style.display = 'block';
+}
+
+
+
+function showLoader() {
+  if(hideLoader) return
+  loadingWrapper.style.display = 'flex';
+  canvas.style.display = 'none';
+}
+
+
+
+function showPaginator() {
+  if(hidePaginator) return
+  paginator.style.display = 'block';
+}
+
+
+
+function queueRenderPage(num) {
+  if (pageRendering) {
+    pageNumPending = num;
+  } else {
+    renderPage(num);
+  }
+}
+
+
+
+function onPrevPage() {
+  if (pageNum <= 1) {
+    return;
+  }
+  pageNum--;
+  queueRenderPage(pageNum);
+}
+document.getElementById('prev').addEventListener('click', onPrevPage);
+
+
+
+function onNextPage() {
+  if (pageNum >= pdfDoc.numPages) {
+    return;
+  }
+  pageNum++;
+  queueRenderPage(pageNum);
+}
+document.getElementById('next').addEventListener('click', onNextPage);
+
+
+
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+  pdfDoc = pdfDoc_;
+  var numPages = pdfDoc.numPages;
+  document.getElementById('page_count').textContent = numPages;
+  
+  
+  if(pageNum > numPages) {
+    pageNum = numPages
+  }
+
+  
+  renderPage(pageNum);
+});
+}
+
+</script>
+
+<p><a href="../page-pple/" title="Retour">Retour à la page
+principale</a></p>
+<p>example of image displaying syntax : <img src="link" alt="text" />{
+options like width=} <img src="/images/tiger.png" width="250"
+alt="my tiger" /></p>
+
+          </div>
+
+    </article>
+    <div class="row">
+        
+    </div>
+    
+    <div class="row">
+            <ul class="pager">
+             
+                    <li><a class="next" href="http://localhost:1313/content/markdown-archetype/">&laquo; Markdown Archetype default</a></li>
+              
+              
+                <li><a class="previous" href="http://localhost:1313/content/posts/epubjs/">Epub.js &raquo;</a></li>
+              
+            </ul>
+    </div>
+</div>
+
+
+<div class="col-md-4 mt20">
+        <div class="post-img">
+            
+            <img width="600" src="http://localhost:1313/images/gopher.jpg" alt="webjeda">
+            
+        </div>
+            
+        
+        <div class="mt10 recent">
+            <h2>Recent articles</h2>        
+             <ul>
+                
+              </ul>
+        </div>
+        
+        <br>
+
+</div>
+
+</div>
+
+
+
+
+      </div>
+    </div>
+
+    <footer>
+    <div class="container">
+        <div class="row p20">
+            
+
+            <div class="col-md-4 text-center mt25" >
+                
+                
+                
+            </div>
+            <div class="col-md-4 text-center mt25">
+               
+                <a target="_blank" href="https://facebook.com/qatran75"><li class="social facebook"><i class="fa fa-facebook-square"></i></li></a> 
+                
+               
+               
+                <a target="_blank" href="https://twitter.com/qatran"><li class="social twitter"><i class="fa fa-twitter-square"></i></li></a>
+                
+               
+                <a target="_blank" href="https://github.com/tran62"><li class="social github"><i class="fa fa-github-square"></i></li></a>
+                
+               
+                <a target="_blank" href="mailto:qat@melix.net"><li class="social email"><i class="fa fa-envelope"></i></li></a>
+                
+            </div>
+
+        </div> 
+    </div>
+    <script>
+    window.store = {
+        
+        
+        
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/asciidoc-archetype\/": {
+            
+            "title": "AsciiDoc Archetype default",
+            "tags": ["literature","philo","math","poetry","tools","chinese","viet",],
+            "content": " First Steps with AsciiDoc characters can be escaped using a \\\nfor instance, you can escape a quote inside emphasized text like \u0026#39;Here\u0026#39;s Johnny!\u0026#39;\nyou can safely use reserved XML characters like \u0026lt;, \u0026gt; and \u0026amp;, which are escaped when rendering\nforce a space between inline elements using the {sp} attribute\nhold text together with an intrinsic non-breaking space attribute, {nbsp}\nhandle words with unicode characters like in the name Gregory Romé\nclaim your copyright ©, registered trademark ® or trademark ™\nYou can write text with inline links, optionally using an explicit link prefix. In either case, the link can have a query string.\nIf you want to break a line just end it in a + sign and continue typing on the next line.\nLists Upon Lists Adjacent lists this list (* this list)\nshould join\nto have\nfour items\nNumbered lists (.Numbered lists) These items (. These items)\nwill be auto-numbered\nand can be nested (.. and can be nested)\nnew\nsecond new\nsecond\nA numbered list can nest\nunordered\nlist\nitems\nterm definition line two\nanother term another definition, which can be literal (indented) or regular paragraph\nThis should be a standalone paragraph, not grabbed by the definition list.\nfirst level written on two lines\nfirst level\nwith this literal text second level\nthird level\nfourth level\nback to first level\nLet’s make a horizontal rule…​\nthen take a break.\nWe’re back! Example of link tiger-link\nExamples of image\nExample of aligned verse:\nTo be, or not to be, that is the question: Whether \u0026#39;tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep No more; and by a sleep, to say we end The heart-ache, and the thousand natural shocks That Flesh is heir to? \u0026#39;Tis a consummation Devoutly to be wished. To die, to sleep, To sleep, perchance to Dream; aye, there’s the rub, For in that sleep of death, what dreams may come, When we have shuffled off this mortal coil, Must give us pause. There’s the respect That makes Calamity of so long life: For who would bear the Whips and Scorns of time, The Oppressor’s wrong, the proud man’s Contumely, The pangs of dispised Love, the Law’s delay, The insolence of Office, and the spurns That patient merit of th’unworthy takes, When he himself might his Quietus make With a bare Bodkin? Who would Fardels bear, [F: these Fardels] To grunt and sweat under a weary life, But that the dread of something after death, The undiscovered country, from whose bourn No traveller returns, puzzles the will, And makes us rather bear those ills we have, Than fly to others that we know not of? Thus conscience does make cowards of us all, And thus the native hue of Resolution Is sicklied o’er, with the pale cast of Thought, And enterprises of great pitch and moment, [F: pith] With this regard their Currents turn awry, [F: away] And lose the name of Action. Soft you now, The fair Ophelia? Nymph, in thy Orisons Be all my sins remember’d. Example of quote:\nWhen you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.\n— Sir Arthur Conan Doyle The Adventures of Sherlock Holmes Subscript / Superscript 19th coded: 19^th^\nH2O coded: H~2~O\nEmbedded Pdf Previous Next \u0026nbsp; \u0026nbsp; Page: / Footnotes n1 [1]\ntest ref biblio [model]\nBibliography: [model] Author name, Title, Editor, date-of-publication clickhere\n1. n1 Text of footnote n°1 ", 
+            "url": "http:\/\/localhost:1313\/content\/asciidoc-archetype\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/categories\/": {
+            
+            "title": "Categories",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/categories\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/chinese\/": {
+            
+            "title": "Chinese",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/chinese\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/": {
+            
+            "title": "Contents",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/content\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/": {
+            
+            "title": "hugascii",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/hugo\/": {
+            
+            "title": "Hugo",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/hugo\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/literature\/": {
+            
+            "title": "Literature",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/literature\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/markdown-archetype\/": {
+            
+            "title": "Markdown Archetype default",
+            "tags": ["meta","math","literature","philo","poetry","sudoku","hugo","tools","chinese",],
+            "content": "Tiger - static/images/tiger.png\nThanks to markdown-it for most of the content of this file! \u0026ndash;nm\nmathjax : $$ \\cos \\frac{\\pi}{4} = \\frac {\\sqrt 2}{2} $$\n\\cos \\frac{\\pi}{4} = \\frac {\\sqrt 2}{2} gives:\nh1 Heading h2 Heading Typographic replacements (c) (C) (r) (R) (tm) (TM) (p) (P) +-\n\u0026ldquo;Smartypants, double quotes\u0026rdquo; and \u0026lsquo;single quotes\u0026rsquo;\nEmphasis This is bold text fr:\u0026quot;**using double * fences**\u0026quot;\nThis is bold text fr:\u0026quot;__using double underscore fences__\u0026quot;\nThis is italic text fr:\u0026quot;*using single star fences*\u0026quot;\nThis is italic text fr:\u0026quot;_using single underscore fences_\u0026quot;\nStrikethrough fr:\u0026quot;~~usinh double tildes fences~~\u0026quot;\nCode Inline code\nIndented code by inserting 2 spaces at start of each line\n// Some comments line 1 of code line 2 of code line 3 of code Block code \u0026ldquo;fences\u0026rdquo;\nSample text here sandwiched between two 3 grave accents lines... from:\n```\nSample text here\u0026hellip;\n```\nSyntax highlighting (js)\nvar foo = function (bar) { return bar++; # preceded by a 3 grave + \u0026#34;js\u0026#34; line }; console.log(foo(5)); from:\n``` js\nvar foo = function (bar) { return bar++; };\nconsole.log(foo(5));\n```\nLinks link text\nlink with title\nfrom:\n[link text](http://dev.nodeca.com)\n[link with title](http://nodeca.github.io/pica/demo/ \u0026quot;title text!\u0026quot;)\nembed-pdf Previous Next \u0026nbsp; \u0026nbsp; Page: / Retour à la page principale\nImages Minion\nStormtroopCat\nLike links, Images also have a footnote style syntax\nWith a reference later in the document defining the URL location:\nSubscript / Superscript 19th from: 19\u0026lt;sup\u0026gt;th\u0026lt;/sup\u0026gt; H2O from: H\u0026lt;sub\u0026gt;2\u0026lt;/sub\u0026gt;O Footnotes Footnote 1 link1. coded: Footnote 1 link[^first]. Footnotes definitions:\ncoded: [^first]: Footnote **can have markup**\n`and multiple paragraphs.` [^second]: Footnote text.\nCitations Blah blah [@doe99; @smith2000; @smith2004].\nBlah blah.2\n![](/images/tiger.png =300x200)\n*** End test text ***\nFootnote can have markup\nand multiple paragraphs.\u0026#160;\u0026#x21a9;\u0026#xfe0e;\nJohn Doe, \u0026ldquo;Frogs,\u0026rdquo; Journal of Amphibians 44 (1999); Susan Smith, \u0026ldquo;Flies,\u0026rdquo; Journal of Insects (2000); Susan Smith, \u0026ldquo;Bees,\u0026rdquo; Journal of Insects (2004).\u0026#160;\u0026#x21a9;\u0026#xfe0e;\n", 
+            "url": "http:\/\/localhost:1313\/content\/markdown-archetype\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/math\/": {
+            
+            "title": "Math",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/math\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/meta\/": {
+            
+            "title": "Meta",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/meta\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/multilingual\/": {
+            
+            "title": "Multilingual",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/multilingual\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/pandoc-archetype\/": {
+            
+            "title": "Pandoc Archetype default",
+            "tags": ["meta","math","literature","philo","poetry","tools","chinese","viet","multilingual",],
+            "content": "embed-pdf Previous Next \u0026nbsp; \u0026nbsp; Page: / Retour à la page principale\nexample of image displaying syntax : { options like width=} ", 
+            "url": "http:\/\/localhost:1313\/content\/pandoc-archetype\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/philo\/": {
+            
+            "title": "Philo",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/philo\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/poetry\/": {
+            
+            "title": "Poetry",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/poetry\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/sudoku\/": {
+            
+            "title": "Sudoku",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/sudoku\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/": {
+            
+            "title": "Tags",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/categories\/test\/": {
+            
+            "title": "Test",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/categories\/test\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/tools\/": {
+            
+            "title": "Tools",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/tools\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/viet\/": {
+            
+            "title": "Viet",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/viet\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/categories\/article\/": {
+            
+            "title": "Article",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/categories\/article\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/epubjs\/": {
+            
+            "title": "Epub.js",
+            "tags": ["hugo","tools","multilingual",],
+            "content": " Epub reader - FuturePress ‹ › Bibliography: [EPUB.js] eBooks reader, Epub.js, FuturePress, date-of-publication clickhere\n", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/epubjs\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/search\/": {
+            
+            "title": "Search this site!",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/content\/search\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/search\/": {
+            
+            "title": "Search this site!",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/search\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/game\/": {
+            
+            "title": "Game",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/game\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/categories\/post\/": {
+            
+            "title": "Post",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/categories\/post\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/sudoku\/": {
+            
+            "title": "Sudoku",
+            "tags": ["math","game",],
+            "content": " Site pour jouer avec assistance automatisée en ligne Quickstart:\nbouton \u0026#34;Import a Sudoku\u0026#34; pour introduire l’énigme (puzzle) à résoudre; par exemple le Sudoku du Figaro hebdo mentionné par Lê Dong \u0026#34;..63…​.4…​.1..6.2..7..8…​9..3…​.8…​…​.5…​..72..9..5…​8…​…​279..6…​…​1\u0026#34;\ncliquer sur le tableau pour mieux voir la situation d’ensemble d’un symbole (numéro de 1 à 9).\nvous pouvez jouer à tout moment, en éditant le Sudoku sur le petit tableau à gauche, ou en commutant entre les boutons radio \u0026#34;Highlighted\u0026#34; et \u0026#34;Edited\u0026#34; du grand tableau central.\nBesoin d’assistance ou cas de blocage ?:\nbouton \u0026#34;Take Step\u0026#34; pour chaque pas vers la solution automatique.\nbouton \u0026#34;\u0026lt;\u0026lt;\u0026#34; pour revenir d’un pas dans la solution.\nbouton \u0026#34;Solution Count\u0026#34; jaune en haut à droite pour vérifier qu’il y a une solution\nbouton \u0026#34;Grader\u0026#34; pour vérifier la classe de la Grille (Tough, Diabolical, Extreme …​)\nbouton \u0026#34;Solve Path\u0026#34; pour suivre et se documenter sur les techniques conseillées.\nCinq Techniques Ref: [khoan] [1]\nRègle élémentaire (Single) : décision (placer ou affecter un symbole) sur une case\nTechniques pour multiplets ( Naked/Hidden Pairs/Triples/ Quads PointingPairs Sue de Coq) : solution tenant compte de l’identification de multiples liant plusieurs cases à un ensemble donné de symboles\nTechniques d’attache (covering) : règle de répartition quasi-idéale résumant l’essentiel de moultes configurations célèbres: X-wing , Swordfish , Jellyfish , Finned X-wing, Finned Swordfish, sashimi fish, frankenfish, finned mutant whale, kraken fish\nTechniques de chaîne(chain) : chains and loops trois types de chaînes à plusieurs symboles: CSA (Chaînes à Symboles Attachés): Digit forcing chains, CQF (Chaînes Quasi-Figés) et CM (Chaînes Mixtes)Cell forcing chains; Unit forcing chains , Nishio forcing chains\nTechnique du dilemme (guessing) : choix d’une case ou d’un groupe de cases à attacher ou à interdire à des symboles.Bowman’s Bingo, guessing\nBibliography: [] Andrew C. STUART, The Logic of Sudoku - 2006 -Reconnu même par Khoan comme le meilleur ouvrage sur la théorie des Grilles de Sudoku Amazon épuisé?\nFigure 1. Andrew Stuart - The Logic of Sudoku-2006 [] The Daily Killer Sudoku by Andrew Stuart sudokuwiki.org\n[] Daily Sudoku by Andrew Stuart www.amazon.fr/Logic-Sudoku-Andrew-C-Stuart/dp/0955484103\n[] Khoan VO-KHAC, Cinq techniques pour terminer toute grille de sudoku - 2016, site Internet 16.95€\nFigure 2. Khoan VK - Cinq techniques…​ [] Khoan VO-KHAC, New Sudoku Puzzles with explained solutions - fev 2018, Amazon 8.52€\n[] Khoan VO-KHAC, Easy sudoku puzzles woth explained solutions -mai 2018, Amazon 4,22€ [] Khoan VO-KHAC, How to finish quickly Sudoku Puzzles - 2017 :eight techniques …​Amazon 5,94€\nFigure 3. Khoan VK- How to finish quickly Sudoku puzzles 1. C’est vrai que le formalisme à la Bourbaki rend la lecture des quelques pages théoriques difficile. Mais passée l’étape de l’assimilation du vocabulaire, les explications de Khoan dans les exemples sont géniales ", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/sudoku\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/coding\/": {
+            
+            "title": "Coding",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/coding\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/github\/": {
+            
+            "title": "Github tools",
+            "tags": ["meta","tech","coding","software",],
+            "content": " Catalogue of Gist applications ref biblio [dawson]\nStarting commands in line : jekyll : \u0026gt;bundle exec jekyll s\ngatsby : \u0026gt;gatsby develop\nhugo : \u0026gt;:hugo serve --gc --disableFastRender\nhaskell : \u0026gt;ghci\npython : \u0026gt;python prog.py\nnode-js : \u0026gt;npm prog.js\nc++ : _\u0026gt;gcc _\nruby : \u0026gt;gem prog\nerlang : ?\nrust : ?\nHTML scripts javascript :\nheaders :\nMarkdown → asciidoc lists : unordered (-,*) ordered (.)\nimages : ![alt-text](link \u0026#34;title\u0026#34;) links : (lnk)[] lnk\nyoutube : footnote: .[1]\nbibliography: ref [ref]\nabreviation: :imho: IMHO ref {imho}\nBibliography: [dawson] Chris Dawson with Ben Straub, Building Tools with GitHub - chap 2: Gists and the Gist API, O’Reilly 2016, link: github/xrd\n1. text ", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/github\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/software\/": {
+            
+            "title": "Software",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/software\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/tech\/": {
+            
+            "title": "Tech",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/tech\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/auth0\/": {
+            
+            "title": "Auth0",
+            "tags": ["meta","software","tech","coding","web",],
+            "content": " Link : D Quiros- Auth0 for SPA\nSteps:\nSet up an Auth0 Client (SPA js app using an API)\nSet locahost:3000/callback\nselect Implicit Grant Type\n$ npm i -g create-react-app\n$ create-react-app app\n$ yarn start (in app directory)\n$ yarn add react-router-dom\nDefine routes in index.js import React from \u0026#39;react\u0026#39;; import ReactDOM from \u0026#39;react-dom\u0026#39;; import { BrowserRouter as Router, Switch, Route } from \u0026#39;react-router-dom\u0026#39;; import \u0026#39;./index.css\u0026#39;; import Home from \u0026#39;./Home\u0026#39;; import LoginCallback from \u0026#39;./LoginCallback\u0026#39;; import registerServiceWorker from \u0026#39;./registerServiceWorker\u0026#39;;\nReactDOM.render( \u0026lt;Router\u0026gt; \u0026lt;Switch\u0026gt; \u0026lt;Route path=\u0026#34;/callback\u0026#34; component={LoginCallback} /\u0026gt; \u0026lt;Route path=\u0026#34;/\u0026#34; component={Home} /\u0026gt; \u0026lt;/Switch\u0026gt; \u0026lt;/Router\u0026gt;, document.getElementById(\u0026#39;root\u0026#39;) ); registerServiceWorker(); $ yarn add auth0-js // instantiate Auth0 Client with Domain and Client ID: import auth0 from \u0026#39;auth0-js\u0026#39;;\nconst CLIENT_DOMAIN = \u0026#39;AUTH0_DOMAIN\u0026#39;; const CLIENT_ID = \u0026#39;AUTH0_CLIENT_ID\u0026#39;; const SCOPE = \u0026#39;openid\u0026#39;; const REDIRECT = \u0026#39;http://localhost:3000/callback\u0026#39;;\nconst auth = new auth0.WebAuth({ domain: CLIENT_DOMAIN, clientID: CLIENT_ID, }); export function login() { auth.authorize({ responseType: \u0026#39;token\u0026#39;, redirectUri: REDIRECT, scope: SCOPE, }); } Finally create the Home and LoginCallBack components.\nhome.js:\nimport { login } from \u0026#39;./common/auth\u0026#39;; export default () =\u0026gt; { login(); return null; } LoginCallback.js:\nimport React from \u0026#39;react\u0026#39;; export default () =\u0026gt; ( \u0026lt;div\u0026gt; \u0026lt;p\u0026gt;Login successful!\u0026lt;/p\u0026gt; \u0026lt;/div\u0026gt; ) ", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/auth0\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/web\/": {
+            
+            "title": "Web",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/web\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/pandoc-test\/": {
+            
+            "title": "Pandoc Test",
+            "tags": ["meta","math",],
+            "content": " mathjax : \\cos \\frac{\\pi}{4} = \\frac {\\sqrt 2}{2} gives:\n\\[ \\cos \\frac{\\pi}{4} = \\frac {\\sqrt 2}{2} \\]\nembed-pdf Previous Next \u0026nbsp; \u0026nbsp; Page: / h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules Emphasis This is bold text fr:\"**This is bold text**\"\nThis is bold text fr:\"__This is bold text__\"\nThis is italic text fr:\"*This is italic text*\"\nThis is italic text fr:\"_This is italic text_\"\nStrikethrough fr:\"~~Strikethrough~~\"\nBlockquotes Blockquotes can also be nested… \u0026gt; …by using additional greater-than signs right next to each other… \u0026gt; \u0026gt; …or with spaces between arrows.\n\u0026gt; Blockquotes can also be nested...\n\u0026gt;\u0026gt; ...by using additional \u0026gt; signs right next to each other...\n\u0026gt; \u0026gt; \u0026gt; ...or with spaces between arrows.\nLists Unordered\nCreate a list by starting a line with +, -, or * Sub-lists are made by indenting 2 spaces: Marker character change forces new list start: Ac tristique libero volutpat at Facilisis in pretium nisl aliquet Nulla volutpat aliquam velit Very easy! from:\n+ Sub-lists are made by indenting 2 spaces:\n- Marker character change forces new list start:\n* Ac tristique libero volutpat at + Facilisis in pretium nisl aliquet - Nulla volutpat aliquam velit + Very easy!\nOrdered\nLorem ipsum dolor sit amet\nConsectetur adipiscing elit\nInteger molestie lorem at massa\nYou can use sequential numbers…\n…or keep all the numbers as 1.\nStart numbering with offset:\nfoo bar from:\n`1. Lorem ipsum dolor sit amet 2. Consectetur adipiscing elit 3. Integer molestie lorem at massa\n. You can use sequential numbers...1. …or keep all the numbers as 1.\nStart numbering with offset:\n57. foo1. bar\nCode Inline code\nIndented code by inserting 2 spaces at start of each line\n// Some comments line 1 of code line 2 of code line 3 of code Block code “fences”\nSample text here... from:\n```\nSample text here…\n```\nSyntax highlighting (js)\nvar foo = function (bar) { return bar++; }; console.log(foo(5)); from:\n``` js\nvar foo = function (bar) { return bar++; };\nconsole.log(foo(5));\n```\nTables using separating vertical bar (|)\nOption Description data path to data files to supply the data that will be passed into templates. engine engine to be used for processing templates. Handlebars is the default. ext extension to be used for dest files. Right aligned columns by adding : (:|) to the right of each case\nOption Description data path to data files to supply the data that will be passed into templates. engine engine to be used for processing templates. Handlebars is the default. ext extension to be used for dest files. Links link text\nlink with title\nfrom:\n[link text](http://dev.nodeca.com)\n[link with title](http://nodeca.github.io/pica/demo/ \"title text!\")\nImages Minion 50%\nStormtroopCat 50%\nLike links, Images also have a footnote style syntax\nThe Dojocat 50% With a reference later in the document defining the URL location:\nSubscript / Superscript 19th from: 19\u0026lt;sup\u0026gt;th\u0026lt;/sup\u0026gt; H2O from: H\u0026lt;sub\u0026gt;2\u0026lt;/sub\u0026gt;O Footnotes Footnote 1 link1. coded: Footnote 1 link[^first].\nFootnote 2 link2. coded: Footnote 2 link[^second].\nInline footnote3 coded: Inline footnote^[Text of inline footnote]\nDuplicated footnote reference4. coded: Duplicated footnote reference[^second].\nFootnotes definitions:\ncoded: [^first]: Footnote **can have markup**\n`and multiple paragraphs.` [^second]: Footnote text.\nCitations Blah blah [@doe99; @smith2000; @smith2004].\nBlah blah.5\nDefinition lists Term 1 Definition 1 with lazy continuation. Term 2 Definition 2 with inline markup\n{ some code, part of Definition 2 } Third paragraph of definition 2.\nfrom\nTerm 1\n: Definition 1 with lazy continuation.\nTerm 2\n: Definition 2 with inline markup\n{ some code, part of Definition 2 } Third paragraph of definition 2. Retour à la page principale *** End test text ***\nFootnote can have markup\nand multiple paragraphs.↩︎\nFootnote text.↩︎\nText of inline footnote↩︎\nFootnote text.↩︎\nJohn Doe, “Frogs,” Journal of Amphibians 44 (1999); Susan Smith, “Flies,” Journal of Insects (2000); Susan Smith, “Bees,” Journal of Insects (2004).↩︎\n", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/pandoc-test\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/asciidoc-test\/": {
+            
+            "title": "Asciidoc Test",
+            "tags": ["meta","test",],
+            "content": " Sunset from articles/asciidoc-test/` local directory\nAsciidoctor Demo Footnotes fnote1.[1] (fnote1.footnote:fn1\\[Text footnote n°1 blabla])\nfnote2.[2]\nfnote3.[1] (fnote3.footnote:fn1\\[])\nAbbreviations include statements containing containing:\n…​ AFAIK {gdpr} {hateoas} {html} {imho} {rest} {rgpd}\nMaths\n{C},{Cb},{Cc},{Ck},{Cinfty},{Cuk},{Cuinfty} {L1},{L2},{Lp},{S},{Sobolev},{GLn} {On},{SLn},{SOn},{SUn},{Un},{GL2Fq} {GRH},{Sn},{Qbar}\nAFAIK {html} is a publishing language. { afaik } { html } …​\n{IMHO} or {imho} it’s non case-sensitive.\nsome math acronyms: {SOn} {SUn}\n{hateoas}\n{REST}\n{rgpd} en français\n{GDPR} in english\nFirst Steps with AsciiDoc Inline markup undescores around a phrase place emphasis\nastericks around a phrase make the text bold\ndouble astericks around one or more letters in a word make those letters bold\ndouble underscore around a substring in a word emphasize that substring\nuse carrots around characters to make them superscript\nuse tildes around characters to make them subscript\nto pass through HTML directly, surround the text with triple plus\ncharacters can be escaped using a \\\nfor instance, you can escape a quote inside emphasized text like \u0026#39;Here\u0026#39;s Johnny!\u0026#39;\nyou can safely use reserved XML characters like \u0026lt;, \u0026gt; and \u0026amp;, which are escaped when rendering\nforce a space between inline elements using the {sp} attribute\nhold text together with an intrinsic non-breaking space attribute, {nbsp}\nhandle words with unicode characters like in the name Gregory Romé\nclaim your copyright ©, registered trademark ® or trademark ™\nYou can write text with inline links, optionally using an explicit link prefix. In either case, the link can have a query string.\nIf you want to break a line just end it in a + sign and continue typing on the next line.\nLists Upon Lists Adjacent lists this list (* this list)\nshould join\nto have\nfour items\nNumbered lists (.Numbered lists) These items (. These items)\nwill be auto-numbered\nand can be nested (.. and can be nested)\nnew\nsecond new\nsecond\nA numbered list can nest\nunordered\nlist\nitems\nStatement I swear I left it in \u0026#39;Guy\u0026#39;s\u0026#39; car. Let\u0026#39;s go look for it. (I swear I left it in \u0026#39;Guy\\ \u0026#39;s\u0026#39; car. Let\\ \u0026#39;s go look for it.)\nLet’s make a horizontal rule…​\nthen take a break.\nWe’re back! Want to see a image?\nDo you feel safer with the tiger in a box?\nFigure 1. Tiger in a box 🔖Note Note: AsciiDoc is quite cool, you should try it! 💡Tip Tip: Go to this ipURL to learn more about it! asciidoc.org\nGo to theses referenced intra site pages :\nlink:/posts/galois/\nlink:/articles/homologies/\nOr you could return to the First Steps or Purpose.\nHere’s a reference to the definition of [another_term], in case you forgot it.\n🔖Note One more thing. Happy documenting! When all else fails, head over to google.com.\nSyntax highlighting (js)\nvar foo = function (bar) { return bar++; }; console.log(foo(5)); Bibliography examples of references [wigner] ref to biblio \u0026#34;wigner\u0026#34; noted \u0026lt;\u0026lt; wigner\u0026gt;\u0026gt; without space after \u0026lt;\u0026lt;\n[model] second ref to \u0026lt;\u0026lt; model\u0026gt;\u0026gt;\nBibliography [wigner] E. P. Wigner, The unreasonable effectiveness of mathematics in the natural sciences, Comm. Pure Appl. Math., 13 (Feb. 1960). Wikipedia\n[model] Author name, Title, Editor, date-of-publication\nSubscript / Superscript 19th coded: 19^th^\nH2O coded: H~2~O\nCitations (footnotes) Citation [3]\nCitation1 [3]\ncitation2 [3]\ncitation3 [3].\nDefinition lists Term 1 : Definition 1\nwith lazy continuation. Term 2 : Definition 2 with inline markup\n{ some code, part of Definition 2 } Third paragraph of definition 2. End test text\n1. Text of footnote n°1 blabla 2. Text of footnote n° 2 blablabla 3. John Doe, \u0026#34;Frogs,\u0026#34; Journal of Amphibians 44 (1999); Susan Smith, \u0026#34;Flies,\u0026#34; Journal of Insects (2000); Susan Smith, \u0026#34;Bees,\u0026#34; Journal of Insects (2004). ", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/asciidoc-test\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/test\/": {
+            
+            "title": "Test",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/test\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/installations\/": {
+            
+            "title": "Installations",
+            "tags": ["meta","tech","coding","web","software",],
+            "content": " Installation of this site Install Hugo \u0026gt;git clone https://github.com/gohugo.io/hugo.git \u0026gt;cd hugo \u0026gt;brew install go \u0026gt;go install --tags extended Install InfiniteInk’s themeless-gitless-intro-hugo \u0026gt;git clone https://github.com/infiniteink/themesless-gitless-intro-hugo.git \u0026gt;hugo server -D --gc --disableFastRender Install Asciidoctor \u0026gt;brew install Asciidoctor \u0026gt;brew install ruby \u0026gt;brew install brew-gem create asciidoctor executable shell\n#!/bin/bash if [ -f /usr/local/bin/asciidoctor ]; then ad=\u0026#34;/usr/local/bin/asciidoctor\u0026#34; else ad=\u0026#34;/usr/bin/asciidoctor\u0026#34; fi $ad -B . -r asciidoctor-diagram -a icons=font -a docinfo=shared -a nofooter -a sectanchors -a experimental=true -a figure-caption! -a source-highlighter=highlightjs -a toc-title! -a stem=mathjax - | sed -E -e \u0026#34;s/img src=\\\u0026#34;([^/]+)\\\u0026#34;/img src=\\\u0026#34;\\/diagram\\/\\1\\\u0026#34;/\u0026#34; mkdir -p static/diagram if ls *.svg \u0026gt;/dev/null 2\u0026gt;\u0026amp;1; then mv -f *.svg static/diagram fi if ls *.png \u0026gt;/dev/null 2\u0026gt;\u0026amp;1; then mv -f *.png static/diagram fi Install _Pandoc¨ brew install pandoc brew install library python homebrew /cask/basictex tlmgr install collection-fontsrecommended create hugo executable shell\n!/bin/bash export PANDOC_ORIGINAL=$(which pandoc) # Overrides pandoc. PATH=$PWD/bin:$PATH hugo \u0026#34;$@\u0026#34; cheatsheet: Previous Next \u0026nbsp; \u0026nbsp; Page: / Adapt config.yaml file hide/show: config add S9 Sharebuttons panel add partials/s9-widget-wrapper.html\n\u0026lt;!-- layouts/partials/s9-widget-wrapper.html --\u0026gt; \u0026lt;!-- the following script is to be put in the head part of the html --\u0026gt; \u0026lt;!-- script id=\u0026#34;s9-sdk\u0026#34; async defer content=\u0026#34;33fbf926f45e4d42afe4e864df7e1fda\u0026#34; src=\u0026#34;//cdn.social9.com/js/socialshare.min.js\u0026#34;\u0026gt; \u0026lt;/script --\u0026gt; {{ if or .Params.s9 .Site.Params.s9 }} {{ i18n \u0026#34;shareThisArticle\u0026#34; }} \u0026lt;div class=\u0026#34;s9-widget-wrapper\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; {{ end }} add s9 variable to config.yaml\nadd s9-sdk script to partials/head-scripts.html\nadd s9-wrapper to partials/header-scripts.html\n=== create Mathjax partial file \u0026lt;!-- layouts/partials/math.html -→ {{ if or .Params.math .Site.Params.math }} \u0026lt;script src=\u0026#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script type=\u0026#34;text/x-mathjax-config\u0026#34;\u0026gt; MathJax.Hub.Config({ showMathMenu: false, //disables context menu tex2jax: { inlineMath: [ [\u0026#39;$\u0026#39;,\u0026#39;$\u0026#39;], [\u0026#39;\\\\(\u0026#39;,\u0026#39;\\\\)\u0026#39;] ] } }); \u0026lt;/script\u0026gt; {{ end }}\n- add invoking script in partial/header-scripts.html - add invoking script in partials/post-preview.html - add math variable in config.yaml Add Webjeda theme to set posts into visual Cards\n$ cd themes $ git submodule add https://github.com/tran62/hugo-cards.git theme forked from /bul-ikana/hugo-cards (for hugo) from /sharu725/cards (Webjeda)\nput hugo-cards theme as first theme in config.yaml\nenable scss in assets/sass in scripts in head-scripts.html partial\nenable bootstrap.js in head-scripts.html partial\n\u0026lt;script src=\u0026#34;js/bootstrap.min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; Add Showhide partial block feature add showhide.html to layouts/shortcodes/\nusage: {{/*\u0026lt; showhide id=\u0026#34;unique-id\u0026#34;\u0026gt;*/}} Text in html to show/hide (remove the comments (/*, */) to enable feature) {{/*\u0026lt; /showhide \u0026gt;*/}} Add Hover term definition feature add tip.html and def.html to layouts/shortcodes/\nusage: {{tip}}your word{{def}}definition of word{{/def}}{{/tip}} ex: test post in content/posts/ Add Embed-pdf feature from: hugo-embed-pdf-shortcode A shortcode for Hugo(gohugo.io/) which allows you to embed a PDF file in a page using Pdf.js (mozilla.github.io/pdf.js/)\nclone hugo-embed-pdf-shortcode.git\ncd hugo-embed…​\ncp ./layouts/shortcodes/embed-pdf.html in your Hugo website dir\ncp ./static/js/pdf-js/ directory to your ./static/js website dir\n- cp -R ./static/js/pdf-js /your-hugo/static/js/ - usage: {{/*\u0026lt; embed-pdf url=\u0026#34;toto.pdf\u0026#34; \u0026gt;*/}} (remove the /* comment brackets) Add Search feature from victoria.dev/blog/add-search-to-hugo-static-sites-with-lunr/\ncreate search-form.html partial\ninclude this partial into layouts/search/\ncreate layouts/search/list.html template\ncreate content/search/_index.md page\nbuild search-index partial into footer partial\ncreate static/js/search.js script file\ncreate content/search/_index.md page (frontmatter only)\nGit Large file Storage from link: Git LFS\nbrew install git-lfs\ngit lfs install\ngit lfs track \u0026#34;*.pdf\u0026#34;\ngit add .gitattributes\nthen just add commit and push to GitHub as you normally would \u0026#39;\u0026#39;\u0026#39;(zsh) git add file.pdf git commit -m \u0026#34;Add pdf file\u0026#34; git push origin master \u0026#39;\u0026#39;\u0026#39;\nConvert hanzi to calligraphic Akizuti Converter, Hanzi to calligraphy, Akuziti calligraphy converter choose option 39 - put result to Cmd-shift-4 screen copy or Gimp to convert to png/jpg image === current projects\nembed epub on web page github/futurepress\nepub theme for Hugo weitblick\nasciidoc to epub asciidoctor-epub3\ncreate remote origin repository git remote add origin git@github.com:tran62/repo-name.git git branch -M main git push -u origin main\npublish on netlify.com copy required files for successful deployment: netlify.toml, batch commands: bin/asciidoc, bin/pandoc, Gemfile, Gemfile.lock, hugo, runtime.txt, acronyms.txt\ngoto your account on netlify and connect to your github repository.\n", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/installations\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/categories\/readme\/": {
+            
+            "title": "Readme",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/categories\/readme\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/tags\/markdown\/": {
+            
+            "title": "Markdown",
+            "tags": [],
+            "content": "", 
+            "url": "http:\/\/localhost:1313\/tags\/markdown\/"
+        },
+        
+        
+        
+        "http:\/\/localhost:1313\/content\/posts\/markdown-test\/": {
+            
+            "title": "Markdown Tests",
+            "tags": ["markdown","meta","test",],
+            "content": " draft: true title: Tooltips date: 2022-05-20\nbelow are user-defined parameters (lower case keys recommended) subtitle: tags:\nmeta markup: \u0026ldquo;md\u0026rdquo; # or \u0026ldquo;pdc\u0026rdquo; or \u0026ldquo;md\u0026rdquo; categories: [\u0026ldquo;md\u0026rdquo;] # \u0026ldquo;md\u0026rdquo; \u0026ldquo;pdc\u0026rdquo; \u0026ldquo;viet\u0026rdquo; \u0026ldquo;hanyu\u0026rdquo; math: true # no mathjax s9: true Tooltip: Your word here Word definition here Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, harum Wikipedia Tooltip. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, harum tip1 **Tooltip 1**: example rem dolorem impedit sapiente aliquam quidem ut voluptates dolorum?\nNecessitatibus, neque, quam suscipit corporis nostrum, aliquam quaeinventore tip2 Tooltip 2: example aliquid consequuntur illum quas enim minima recusandae aut? Excepturi magnam repudiandae fugit. Eos commodi necessitatibus unde quia.\ntip3 **Tooltip 3**: example Repellat vero facere laboriosam quis? Tiger - static/images/tiger.png\nThanks to markdown-it for most of the content of this file! \u0026ndash;nm\nh1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules Typographic replacements (c) (C) (r) (R) (tm) (TM) (p) (P) +-\n\u0026ldquo;Smartypants, double quotes\u0026rdquo; and \u0026lsquo;single quotes\u0026rsquo;\nEmphasis This is bold text fr:\u0026quot;**This is bold text**\u0026quot;\nThis is bold text fr:\u0026quot;__This is bold text__\u0026quot;\nThis is italic text fr:\u0026quot;*This is italic text*\u0026quot;\nThis is italic text fr:\u0026quot;_This is italic text_\u0026quot;\nStrikethrough fr:\u0026quot;~~Strikethrough~~\u0026quot;\nBlockquotes Blockquotes can also be nested\u0026hellip;\n\u0026hellip;by using additional greater-than signs right next to each other\u0026hellip;\n\u0026hellip;or with spaces between arrows.\n\u0026gt; Blockquotes can also be nested...\n\u0026gt;\u0026gt; ...by using additional \u0026gt; signs right next to each other...\n\u0026gt; \u0026gt; \u0026gt; ...or with spaces between arrows.\nLists Unordered\nCreate a list by starting a line with +, -, or * Sub-lists are made by indenting 2 spaces: Marker character change forces new list start: Ac tristique libero volutpat at Facilisis in pretium nisl aliquet Nulla volutpat aliquam velit Very easy! from:\n+ Sub-lists are made by indenting 2 spaces:\n- Marker character change forces new list start:\n* Ac tristique libero volutpat at + Facilisis in pretium nisl aliquet - Nulla volutpat aliquam velit + Very easy!\nOrdered\nLorem ipsum dolor sit amet\nConsectetur adipiscing elit\nInteger molestie lorem at massa\nYou can use sequential numbers\u0026hellip;\n\u0026hellip;or keep all the numbers as 1.\nStart numbering with offset:\nfoo bar from:\n`1. Lorem ipsum dolor sit amet 2. Consectetur adipiscing elit 3. Integer molestie lorem at massa\n. You can use sequential numbers... 1. \u0026hellip;or keep all the numbers as 1.\nStart numbering with offset:\n57. foo 1. bar\nCode Inline code\nIndented code by inserting 2 spaces at start of each line\n// Some comments line 1 of code line 2 of code line 3 of code Block code \u0026ldquo;fences\u0026rdquo;\nSample text here... from:\n```\nSample text here\u0026hellip;\n```\nSyntax highlighting (js)\nvar foo = function (bar) { return bar++; }; console.log(foo(5)); from:\n``` js\nvar foo = function (bar) { return bar++; };\nconsole.log(foo(5));\n```\nTables using separating vertical bar (|)\nOption Description data path to data files to supply the data that will be passed into templates. engine engine to be used for processing templates. Handlebars is the default. ext extension to be used for dest files. Right aligned columns by adding : (:|) to the right of each case\nOption Description data path to data files to supply the data that will be passed into templates. engine engine to be used for processing templates. Handlebars is the default. ext extension to be used for dest files. Links link text\nlink with title\nfrom:\n[link text](http://dev.nodeca.com)\n[link with title](http://nodeca.github.io/pica/demo/ \u0026quot;title text!\u0026quot;)\nImages Like links, Images also have a footnote style syntax\nWith a reference later in the document defining the URL location:\nSubscript / Superscript 19th from: 19\u0026lt;sup\u0026gt;th\u0026lt;/sup\u0026gt; H2O from: H\u0026lt;sub\u0026gt;2\u0026lt;/sub\u0026gt;O Footnotes Footnote 1 link1. coded: Footnote 1 link[^first].\nFootnote 2 link2. coded: Footnote 2 link[^second].\nInline footnote^[Text of inline footnote]definition.\nDuplicated footnote reference2. coded: Duplicated footnote reference[^second].\nFootnotes definitions:\ncoded: [^first]: Footnote **can have markup**\n`and multiple paragraphs.` [^second]: Footnote text.\nCitations Blah blah [@doe99; @smith2000; @smith2004].\nBlah blah.3\nDefinition lists Term 1 Definition 1 with lazy continuation. Term 2 Definition 2 with inline markup { some code, part of Definition 2 } Third paragraph of definition 2.\nfrom\nTerm 1\n: Definition 1 with lazy continuation.\nTerm 2\n: Definition 2 with inline markup\n{ some code, part of Definition 2 } Third paragraph of definition 2. *** End test text ***\nFootnote can have markup\nand multiple paragraphs.\u0026#160;\u0026#x21a9;\u0026#xfe0e;\nFootnote text.\u0026#160;\u0026#x21a9;\u0026#xfe0e;\u0026#160;\u0026#x21a9;\u0026#xfe0e;\nJohn Doe, \u0026ldquo;Frogs,\u0026rdquo; Journal of Amphibians 44 (1999); Susan Smith, \u0026ldquo;Flies,\u0026rdquo; Journal of Insects (2000); Susan Smith, \u0026ldquo;Bees,\u0026rdquo; Journal of Insects (2004).\u0026#160;\u0026#x21a9;\u0026#xfe0e;\n", 
+            "url": "http:\/\/localhost:1313\/content\/posts\/markdown-test\/"
+        },
+        
+    }
+</script>
+
+
+<script src="/js/lunr.min.js"></script>
+
+ <script src="/js/search.js"></script>
+</footer>
+    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://localhost:1313//js/bootstrap.min.js"></script>
+  
+  </body>
+
+</html>

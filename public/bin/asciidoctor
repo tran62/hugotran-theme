@@ -1,0 +1,1 @@
+/Users/qat/.rvm/gems/ruby-2.6.3/bin/asciidoctor -r asciidoctor-html5s -b html5s -r asciidoctor-diagram "$@"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on hugascii</title>
+    <link>http://localhost:1313/tags/game/</link>
+    <description>Recent content in Game on hugascii</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Fri, 11 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sudoku</title>
+      <link>http://localhost:1313/content/posts/sudoku/</link>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/content/posts/sudoku/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.sudokuwiki.org/sudoku.htm&#34;&gt;Site pour jouer avec assistance automatisée en ligne&#xA;&lt;span class=&#34;image&#34;&gt;&lt;img src=&#34;./sudokusolver.jpg&#34; alt=&#34;sudokusolver&#34;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;em&gt;Quickstart:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;olist arabic&#34;&gt;&#xA;&lt;ol class=&#34;arabic&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;em&gt;bouton &amp;#34;Import a Sudoku&amp;#34;&lt;/em&gt; pour introduire l’énigme (&lt;em&gt;puzzle&lt;/em&gt;) à résoudre;&#xA;par exemple le Sudoku du Figaro hebdo mentionné par Lê Dong&#xA;&amp;#34;..63…​.4…​.1..6.2..7..8…​9..3…​.8…​…​.5…​..72..9..5…​8…​…​279..6…​…​1&amp;#34;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;cliquer sur &lt;em&gt;le tableau&lt;/em&gt; pour mieux voir la situation d’ensemble d’un symbole (numéro de 1 à 9).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;vous pouvez &lt;em&gt;jouer&lt;/em&gt; à tout moment, en éditant le Sudoku sur le petit tableau à gauche, ou en commutant entre les boutons radio  &amp;#34;&lt;em&gt;Highlighted&lt;/em&gt;&amp;#34; et &amp;#34;&lt;em&gt;Edited&lt;/em&gt;&amp;#34; du grand tableau central.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

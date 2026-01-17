@@ -22,10 +22,10 @@
     
     <div class="row">
             <ul class="pager">
-             {{ with .NextPage }}
+             {{ with .Next }}
                     <li><a class="next" href="{{ .Permalink }}">&laquo; {{ .Title }}</a></li>
               {{ end }}
-              {{ with .PrevPage }}
+              {{ with .Prev }}
                 <li><a class="previous" href="{{ .Permalink }}">{{ .Title }} &raquo;</a></li>
               {{ end }}
             </ul>

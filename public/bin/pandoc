@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$PANDOC_ORIGINAL --filter ./katex.py

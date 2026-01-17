@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sudoku on hugascii</title>
+    <link>http://localhost:1313/tags/sudoku/</link>
+    <description>Recent content in Sudoku on hugascii</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 03 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sudoku/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Archetype default</title>
+      <link>http://localhost:1313/content/markdown-archetype/</link>
+      <pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/content/markdown-archetype/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/tiger.png&#34; alt=&#34;tiger from static/images&#34;&gt;Tiger - static/images/tiger.png&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Thanks to &lt;a href=&#34;https://github.com/markdown-it/markdown-it&#34;&gt;markdown-it&lt;/a&gt;&#xA;for most of the content of this file! &amp;ndash;nm&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;mathjax-&#34;&gt;mathjax :&lt;/h2&gt;&#xA;&lt;p&gt;$$ \cos \frac{\pi}{4} = \frac {\sqrt 2}{2} $$&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;\cos \frac{\pi}{4} = \frac {\sqrt 2}{2}&lt;/code&gt;  gives:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;h1-heading&#34;&gt;h1 Heading&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2-heading&#34;&gt;h2 Heading&lt;/h2&gt;&#xA;&lt;h2 id=&#34;typographic-replacements&#34;&gt;Typographic replacements&lt;/h2&gt;&#xA;&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt; &lt;code&gt;fr:&amp;quot;**using double *  fences**&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt; &lt;code&gt;fr:&amp;quot;__using double underscore fences__&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

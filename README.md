@@ -16,14 +16,14 @@ Theme integrating multiple technologies:
 ## howto test hugotran-theme standalone
 1. git clone https://github.com/tran62/hugotran-theme.git
 2. cd hugotran-theme
-3. hugo serve --themeDir "../.." -s exampleSite -t "hugotran-theme"
+3. hugo serve  -c "exampleSite" --themesDir "../"  -t "hugotran-theme"
 
 ## howto use hugotran-theme for a new site
 1. hugo new site example
 2. cd example
 3. git clone https://github.com/tran62/hugotran-theme.git themes/hugo-theme
-4. hugo serve -s themes/hugotran-theme/exampleSite -t ../..
-4. hugo --buildDrafts --theme="hugotran-theme" --watch server (check)
+4. hugo serve  --config "./exampleSite/config.yaml"   --contentDir "./exampleSite"
+5. hugo --buildDrafts --config "./exampleSite/config.yaml"   --contentDir "./exampleSite" --watch server (check)
 
 
 

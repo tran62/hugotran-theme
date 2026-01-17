@@ -47,8 +47,7 @@ fnote3.footnote:fn1[]
 ___
 
 ___
-include::acronyms.txt[]
-include::acronyms-math.txt[]
+
 
 `include statements containing`
 containing:

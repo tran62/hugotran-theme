@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Readme on hugascii</title>
+    <link>http://localhost:1313/categories/readme/</link>
+    <description>Recent content in Readme on hugascii</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 31 Jul 2021 19:07:25 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/readme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installations</title>
+      <link>http://localhost:1313/content/posts/installations/</link>
+      <pubDate>Sat, 31 Jul 2021 19:07:25 +0200</pubDate>
+      <guid>http://localhost:1313/content/posts/installations/</guid>
+      <description>&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_installation_of_this_site&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;#_installation_of_this_site&#34;&gt;Installation of this site&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;sect2&#34;&gt;&#xA;&lt;h3 id=&#34;_install_hugo&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;#_install_hugo&#34;&gt;Install Hugo&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;listingblock&#34;&gt;&#xA;&lt;div class=&#34;content&#34;&gt;&#xA;&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&amp;gt;git clone https://github.com/gohugo.io/hugo.git&#xA;&amp;gt;cd hugo&#xA;&amp;gt;brew install go&#xA;&amp;gt;go install --tags extended&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;sect2&#34;&gt;&#xA;&lt;h3 id=&#34;_install_infiniteinks_themeless_gitless_intro_hugo&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;#_install_infiniteinks_themeless_gitless_intro_hugo&#34;&gt;Install InfiniteInk’s &lt;em&gt;themeless-gitless-intro-hugo&lt;/em&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;listingblock&#34;&gt;&#xA;&lt;div class=&#34;content&#34;&gt;&#xA;&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&amp;gt;git clone https://github.com/infiniteink/themesless-gitless-intro-hugo.git&#xA;&amp;gt;hugo server -D --gc --disableFastRender&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;sect2&#34;&gt;&#xA;&lt;h3 id=&#34;_install_asciidoctor&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;#_install_asciidoctor&#34;&gt;Install &lt;em&gt;Asciidoctor&lt;/em&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;listingblock&#34;&gt;&#xA;&lt;div class=&#34;content&#34;&gt;&#xA;&lt;pre&gt;&amp;gt;brew install Asciidoctor&#xA;&amp;gt;brew install ruby&#xA;&amp;gt;brew install brew-gem&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;olist arabic&#34;&gt;&#xA;&lt;ol class=&#34;arabic&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;create asciidoctor executable shell&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;listingblock&#34;&gt;&#xA;&lt;div class=&#34;content&#34;&gt;&#xA;&lt;pre&gt;#!/bin/bash&#xA;if [ -f /usr/local/bin/asciidoctor ]; then&#xA;  ad=&amp;#34;/usr/local/bin/asciidoctor&amp;#34;&#xA;else&#xA;  ad=&amp;#34;/usr/bin/asciidoctor&amp;#34;&#xA;fi&#xA;&#xA;$ad -B . -r asciidoctor-diagram -a icons=font -a docinfo=shared -a nofooter -a sectanchors -a experimental=true -a figure-caption! -a source-highlighter=highlightjs -a toc-title! -a stem=mathjax - | sed -E -e &amp;#34;s/img src=\&amp;#34;([^/]+)\&amp;#34;/img src=\&amp;#34;\/diagram\/\1\&amp;#34;/&amp;#34;&#xA;&#xA;mkdir -p static/diagram&#xA;&#xA;if ls *.svg &amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then&#xA;  mv -f *.svg static/diagram&#xA;fi&#xA;&#xA;if ls *.png &amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then&#xA;  mv -f *.png static/diagram&#xA;fi&lt;/pre&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
